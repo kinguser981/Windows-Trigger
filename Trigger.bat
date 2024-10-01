@@ -98,8 +98,6 @@ takeown /f %temp% /r /d y
 
 @echo off
 
-@echo Made by Everything
-
 @echo Disable HPET
 
 bcdedit /deletevalue useplatformclock
@@ -121,6 +119,10 @@ bcdedit /set useplatformtick yes
 rmdir /q /s "%localappdata%MicrosoftEdgeUser DataDefault"
 
 rmdir %LOCALAPPDATA%PackagesMicrosoft.MicrosoftEdge_8wekyb3d8bbweAC /s /q
+
+@echo echo Deleting temporary files...
+
+del /q /f /s %TEMP%\*
 
 @echo Clean Windows logs Again!!!
 
