@@ -70,7 +70,7 @@ ipconfig /flushdns
 
 @echo off
 
-cd/
+cd /
 
 @echo
 
