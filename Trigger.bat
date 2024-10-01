@@ -1,5 +1,17 @@
 color 02
 
+@echo Clean Windows logs
+
+wevtutil cl security
+
+wevtutil cl application
+
+wevtutil cl setup
+
+wevtutil cl system
+
+@echo Done
+
 taskkill /f /IM msedge.exe
 
 taskkill /f /IM msedgewebview2.exe
@@ -105,5 +117,17 @@ bcdedit /set useplatformtick yes
 rmdir /q /s "%localappdata%MicrosoftEdgeUser DataDefault"
 
 rmdir %LOCALAPPDATA%PackagesMicrosoft.MicrosoftEdge_8wekyb3d8bbweAC /s /q
+
+@echo Clean Windows logs Again!!!
+
+wevtutil cl security
+
+wevtutil cl application
+
+wevtutil cl setup
+
+wevtutil cl system
+
+@echo Done!
 
 pause﻿
