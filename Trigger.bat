@@ -1,5 +1,9 @@
 color 02
 
+@echo Reset Firewall 
+
+netsh advfirewall reset
+
 @echo Clean Windows logs
 
 wevtutil cl security
